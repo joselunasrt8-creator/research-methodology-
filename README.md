@@ -72,3 +72,10 @@ This repository is currently a placeholder.
 Its purpose is to reserve the architectural boundary for a general research methodology while that methodology continues to emerge through active investigations.
 
 Content should be promoted here only when it is demonstrably reusable across multiple research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
+
+## Completeness Audit
+
+The current methodology boundary has been assessed from research request through
+publication. The audit records the information, rules, and artifacts an independent
+researcher would need, without evaluating any research claim or proposing an
+implementation. See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
