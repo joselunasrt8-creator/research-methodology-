@@ -1,81 +1,308 @@
 # Research Methodology
 
-> **Status:** Placeholder
+> **Status:** Foundational placeholder
 
 ## Purpose
 
-This repository exists to develop a general methodology for conducting reproducible software engineering research.
+This repository develops a general methodology for conducting reproducible research.
 
-It is intentionally independent of any single research domain, study, implementation, or software system.
+Its central determination is:
+
+> **A methodology is a normative object transformation system.**
+
+It defines which research objects exist, how they may be transformed, what evidence and rules each transformation requires, how outputs are verified, and how provenance, uncertainty, and failure are preserved.
+
+It does not conduct research itself.
+
+## Governing Question
+
+> **How should research objects be transformed into progressively stronger, reviewable, and reproducible research artifacts?**
+
+## Core Model
+
+```text
+Research Need
+        ↓
+Research Request
+        ↓
+Investigation Protocol
+        ↓
+Observations
+        ↓
+Evidence
+        ↓
+Analysis
+        ↓
+Decision
+        ↓
+Finding
+        ↓
+Publication
+```
+
+This sequence is not merely a workflow. Each step represents a typed object transformation governed by declared rules.
+
+## Object, Methodology, and Execution
+
+```text
+Object
+≠
+Execution
+```
+
+An object represents a bounded research state or artifact.
+
+Execution is an activity or event that creates, consumes, or transforms concrete object instances.
+
+Research Methodology defines the transformation contract:
+
+```text
+Object
+        ↓
+Research Methodology
+Defines valid transformations
+        ↓
+Research Execution
+Applies a transformation
+        ↓
+New Object
+```
+
+Therefore:
+
+```text
+Methodology
+≠
+Research Execution
+```
+
+```text
+Transformation Contract
+≠
+Transformation Event
+```
+
+## Research Transformation Contract
+
+Every valid research transformation should define:
+
+```text
+Research Transformation {
+  source object type
+  admissible source state
+  required inputs
+  governing rule
+  operation
+  target object type
+  resulting state
+  preserved invariants
+  permitted changes
+  verification
+  provenance
+  uncertainty
+  failure modes
+  responsible roles
+}
+```
+
+A transformation is valid only when its required inputs exist, its governing rule applies, its provenance resolves, its uncertainty is preserved, and its output satisfies the declared contract.
+
+## First-Class Methodology Objects
+
+Every first-class methodology object should have a consistent shape:
+
+```text
+Methodology Object {
+  identity
+  type
+  purpose
+  inputs
+  outputs
+  lifecycle
+  relationships
+  version
+  provenance
+  uncertainty
+  verification
+  failure state
+}
+```
+
+Research-specific object types include:
+
+- Research Request
+- Investigation Protocol
+- Observation Record
+- Evidence Item
+- Instrument
+- Calibration Record
+- Collection Run
+- Transformation or Analysis Record
+- Decision Record
+- Finding
+- Replication Attempt
+- Verification Result
+- Publication Record
+
+These are type definitions. A specific investigation produces concrete instances.
 
 ## Current Scope
 
-- Research methodology
-- Investigation design
-- Evidence planning
+- Research-object definitions
+- Investigation lifecycle and stage gates
+- Evidence planning and admissibility
+- Observation, derivation, measurement, and analysis boundaries
+- Decision rules and adjudication
 - Scientific instrument interfaces
-- Model calibration
-- Replication strategy
-- Knowledge progression
-- Scientific workflows
+- Calibration and improvement
+- Replication and reproduction
+- Verification and conformance
+- Provenance, traceability, and lineage
+- Missingness, uncertainty, and limitations
+- Publication and transfer boundaries
+- Failure, deviation, withdrawal, and supersession semantics
 
 ## Non-Scope
 
 This repository does not contain:
 
-- Empirical studies
-- Formal theory
-- Deterministic analysis engines
-- Operational software
-- Domain-specific research
+- empirical study executions;
+- investigation-specific evidence;
+- formal domain theory;
+- deterministic analysis engines;
+- operational execution systems;
+- domain-specific research conclusions;
+- authority to accept scientific claims;
+- runtime object mutation.
 
-Those artifacts remain in their respective repositories.
+Those artifacts remain in their respective repositories and executions.
+
+## Relationship to Structology
+
+Structology defines domain-neutral structural primitives.
+
+Research Methodology specializes those primitives for research.
+
+```text
+Structology
+Objects, stages, relations, transformations,
+verification, provenance, and failure
+        ↓
+Research Methodology
+Research-specific object and transformation contracts
+        ↓
+Research Execution
+Investigation-specific instances and events
+```
+
+Research Methodology must not redefine domain-neutral structure as though it were unique to research.
+
+## Relationship to Research Execution
+
+Research Methodology defines types and valid transformations.
+
+Research execution creates instances and performs transformations.
+
+For example:
+
+```text
+Research Methodology
+Defines Observation Record
+        ↓
+Investigation
+Creates BOR-001
+```
+
+```text
+Research Methodology
+Defines Evidence-to-Analysis transformation
+        ↓
+Investigation
+Executes one analysis over frozen evidence
+```
+
+A completed object or transformation instance is evidence of execution. A methodology definition alone is not.
 
 ## Relationship to the Research Stack
 
 ```text
+Structology
+Defines domain-neutral structure
+        ↓
 Research Methodology
-Defines the general research process
+Defines research transformation contracts
         ↓
 MindShift
-Produces candidate abstractions and models
+Produces candidate abstractions and research requests
         ↓
 Architectural Boundary Research
-Produces empirical research artifacts
+Executes empirical investigations
         ↓
 Structural Analysis Foundations
 Produces formal theory
         ↓
 SYNAPSE
 Produces deterministic structural evidence
-        ↓
-ContinuityOS
-Produces execution-legitimacy determinations
 ```
+
+ContinuityOS remains outside the scientific-method execution path. It governs execution legitimacy where mutation-capable actions require authorization.
 
 Each repository owns a distinct transformation and produces a distinct class of artifact.
 
-## Boundary Principle
+## Boundary Principles
 
 ```text
 Methodology
 ≠
-Research execution
+Research Execution
 ```
 
-This repository defines how reproducible research may be structured. It does not conduct, formalize, implement, or operationalize the research itself.
+```text
+Object Type
+≠
+Object Instance
+```
+
+```text
+Analyst Activity
+≠
+Object Transformation
+```
+
+```text
+Transformation
+≠
+Verification
+```
+
+```text
+Verification
+≠
+Scientific Warrant
+```
+
+```text
+Evidence
+≠
+Decision
+```
+
+```text
+Publication
+≠
+Canonical Evidence
+```
+
+This repository defines how reproducible research may be structured. It does not conduct, formalize, implement, operationalize, or authorize the research itself.
 
 ## Current Status
 
-This repository is currently a placeholder.
+This repository reserves the architectural boundary for a general research methodology while that methodology continues to emerge through active investigations.
 
-Its purpose is to reserve the architectural boundary for a general research methodology while that methodology continues to emerge through active investigations.
-
-Content should be promoted here only when it is demonstrably reusable across multiple research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
+Content should be promoted here only when it is reusable across multiple research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
 
 ## Completeness Audit
 
-The current methodology boundary has been assessed from research request through
-publication. The audit records the information, rules, and artifacts an independent
-researcher would need, without evaluating any research claim or proposing an
-implementation. See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
+The current methodology boundary has been assessed from research request through publication. The audit records the information, rules, transformations, and artifacts an independent researcher would need without evaluating a research claim or proposing an implementation.
+
+See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
