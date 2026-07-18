@@ -90,7 +90,9 @@ A **Domain Observation** is an admissible observation about the domain profile o
 
 ### 6.5 Mapping Record
 
-A **Mapping Record** is the explicit relationship between a Structology candidate concept and a domain observation or domain-profile element. It records the source concept, domain target, mapping rationale, preserved meaning, changed meaning, uncertainty, alternatives, and reviewer notes.
+A **Mapping Record** is the explicit relationship between a Structology candidate concept and one or more admissible Domain Observations. It records the source concept, required observation targets, Domain Profile context when useful, mapping rationale, preserved meaning, changed meaning, uncertainty, alternatives, forced-fit indicators, and reviewer notes.
+
+A Domain Profile may provide context only. It cannot substitute for source-bound Domain Observations as the evidentiary target of a Mapping Record.
 
 ### 6.6 Transfer Assessment
 
@@ -102,17 +104,29 @@ A **Forced-Fit Assessment** is the assessment of whether the mapping requires se
 
 ### 6.8 Partial-Fit Assessment
 
-A **Partial-Fit Assessment** is the assessment of cases where some concepts appear to transfer while others require specialization, remain uncertain, or fail to preserve required meanings.
+A **Partial-Fit Assessment** is the assessment of adequately evidenced cases where some concepts transfer and other concepts do not transfer or require bounded specialization, without material unresolved uncertainty.
 
 ### 6.9 Failure Record
 
-A **Failure Record** is a methodology-failure object. It records insufficient evidence, incomplete domain description, ambiguous mappings, protocol violation, unresolved contradiction, or other conditions that prevent a valid conclusion. Audit Failure is not the same as No Transfer.
+A **Failure Record** is a methodology-failure object. It records insufficient evidence, incomplete domain description, ambiguous mappings, protocol violation, unresolved contradiction, unrecorded deviation, or other conditions that prevent a valid conclusion. Audit Failure is not the same as No Transfer.
 
-### 6.10 Audit Conclusion
+### 6.10 Deviation Record
+
+A **Deviation Record** is the required object for a declared departure from this methodology. It records deviation identity, affected lifecycle stage, expected rule, actual event, reason, time recorded, recorder, authorization or permission status, materiality, effect on evidence, effect on interpretation, and disposition.
+
+```text
+Declared Deviation
+        ≠
+Protocol Violation
+```
+
+A declared and permitted deviation may continue under its disposition. An unrecorded, unauthorized, or materially unresolved deviation is a protocol violation and may require a Failure Record.
+
+### 6.11 Audit Conclusion
 
 An **Audit Conclusion** is the final methodological outcome for a completed audit execution. It may be Natural Transfer, Partial Transfer, Forced Fit, No Transfer, or Indeterminate, and must cite the assessments used to reach that conclusion.
 
-### 6.11 Calibration Observation
+### 6.12 Calibration Observation
 
 A **Calibration Observation** is an observation about this methodology's clarity, usability, ambiguity, limitation, or failure mode discovered during an execution. It may support a future methodology improvement proposal, but it does not modify v0.1.
 
@@ -189,11 +203,11 @@ Partial fit is considered when assessment records show that:
 
 - some candidate concepts preserve meaning in the domain;
 - other concepts require domain-specific specialization;
-- some mappings remain uncertain after admissible evidence is reviewed;
 - transfer appears bounded to a subset of domain objects, transformations, lifecycle stages, provenance relations, or verification semantics;
-- unresolved uncertainty does not justify Natural Transfer, Forced Fit, No Transfer, or Audit Failure.
+- sufficient evidence establishes a bounded mixture of transfer and non-transfer;
+- any remaining uncertainty is immaterial to the overall result and is recorded as a limitation rather than used as evidence of transfer.
 
-A Partial-Fit Assessment must identify the concepts that transfer, the concepts that do not transfer or remain uncertain, and the evidence limits that prevent a stronger conclusion.
+A Partial-Fit Assessment must identify the concepts that transfer, the concepts that do not transfer, and the evidence basis that supports the bounded mixture. Material unsupported, ambiguous, contradictory, or evidence-limited mappings support Indeterminate rather than Partial Transfer.
 
 ## 12. Forced-Fit Criteria
 
@@ -224,7 +238,8 @@ An audit execution fails methodologically when it cannot produce a valid conclus
 
 - insufficient evidence;
 - incomplete domain description;
-- ambiguous mappings that cannot be resolved;
+- ambiguous mappings that cannot be documented or reviewed;
+- unrecorded, unauthorized, or materially unresolved deviations;
 - protocol violation;
 - unresolved contradictions in source material or mapping records;
 - missing provenance;
@@ -240,10 +255,10 @@ A Failure Record must state whether the execution stops, continues with limitati
 Canonical outcomes are:
 
 - **Natural Transfer:** mappings preserve required meanings without artificial reinterpretation, forced terminology, or unresolved contradictions material to the conclusion.
-- **Partial Transfer:** some required meanings transfer while others require specialization, remain uncertain, or fail in bounded ways that do not amount to Forced Fit or No Transfer.
+- **Partial Transfer:** sufficient evidence establishes a bounded mixture of transfer and non-transfer without material unresolved uncertainty.
 - **Forced Fit:** the apparent fit depends on semantic redefinition, artificial mapping, collapsed distinctions, or other forced-fit indicators.
 - **No Transfer:** required concepts do not map while preserving meaning, and the non-transfer conclusion is supported by adequate evidence and assessment.
-- **Indeterminate:** available evidence and assessments are insufficient, ambiguous, contradictory, or too limited to justify Natural Transfer, Partial Transfer, Forced Fit, or No Transfer.
+- **Indeterminate:** material mappings remain unsupported, ambiguous, contradictory, or evidence-limited, preventing a justified Natural Transfer, Partial Transfer, Forced Fit, or No Transfer conclusion.
 
 ## 15. Decision Rules
 
@@ -252,11 +267,11 @@ A compliant conclusion must be produced from completed assessment records, not f
 Decision precedence is:
 
 1. If a methodology failure prevents valid assessment, create a Failure Record and stop, amend, continue with limitation, or conclude Indeterminate as specified by the failure disposition.
-2. If forced-fit indicators are material to the mapping and cannot be resolved without semantic redefinition or artificial interpretation, conclude Forced Fit.
-3. If required concepts fail to map while preserving meaning and evidence is sufficient, conclude No Transfer.
-4. If required meanings are preserved across objects, transformations, lifecycle, provenance, and verification semantics without artificial reinterpretation, conclude Natural Transfer.
-5. If some meanings transfer while others require specialization, remain uncertain, or fail in bounded ways, conclude Partial Transfer.
-6. If evidence or assessments remain insufficient, ambiguous, or contradictory after required review, conclude Indeterminate.
+2. If material mappings remain unsupported, ambiguous, contradictory, or evidence-limited after required review, conclude Indeterminate.
+3. If forced-fit indicators are material to the mapping and cannot be resolved without semantic redefinition or artificial interpretation, conclude Forced Fit.
+4. If required concepts fail to map while preserving meaning and evidence is sufficient, conclude No Transfer.
+5. If required meanings are preserved across objects, transformations, lifecycle, provenance, and verification semantics without artificial reinterpretation, conclude Natural Transfer.
+6. If sufficient evidence establishes a bounded mixture of transfer and non-transfer without material unresolved uncertainty, conclude Partial Transfer.
 
 Every conclusion must cite the Transfer Assessment, Forced-Fit Assessment, Partial-Fit Assessment when applicable, Failure Records when present, and unresolved limitations.
 
@@ -292,7 +307,7 @@ Calibration Observation
 
 ### 16.2 Domain Selection
 
-- **Inputs:** accepted Audit Request and Domain Candidates.
+- **Inputs:** accepted Audit Request, Domain Candidates, and relevant Deviation Records if candidate handling departs from the request rule.
 - **Outputs:** admissibility determinations and accepted Domain Candidate list for execution.
 - **Transition rule:** proceed only with candidates satisfying admissible-domain requirements and no exclusion criteria.
 - **Required evidence:** candidate descriptions, independence rationale, source-access statement, exclusion review.
@@ -300,7 +315,7 @@ Calibration Observation
 
 ### 16.3 Domain Profile
 
-- **Inputs:** accepted Domain Candidate and admissible source materials.
+- **Inputs:** accepted Domain Candidate, admissible source materials, and relevant Deviation Records if profile construction departs from the selection rule.
 - **Outputs:** Domain Profile.
 - **Transition rule:** proceed only when the profile identifies objects, transformations, lifecycle, provenance, verification semantics, exclusions, and limitations.
 - **Required evidence:** source citations, profile rationale, completeness review, uncertainty register.
@@ -308,7 +323,7 @@ Calibration Observation
 
 ### 16.4 Observation Collection
 
-- **Inputs:** Domain Profile and source materials.
+- **Inputs:** Domain Profile, source materials, and relevant Deviation Records if observation collection departs from the profile rule.
 - **Outputs:** Domain Observations.
 - **Transition rule:** proceed only with observations that satisfy provenance and admissibility requirements.
 - **Required evidence:** observation source, method, date or version, observed feature, uncertainty, admissibility status.
@@ -316,15 +331,27 @@ Calibration Observation
 
 ### 16.5 Mapping
 
-- **Inputs:** Structology Candidate Model concepts, Domain Profile, Domain Observations.
-- **Outputs:** Mapping Records.
-- **Transition rule:** proceed only when each material mapping records preserved meaning, changed meaning, uncertainty, alternatives, and rationale.
-- **Required evidence:** source concept reference, target observation, mapping rationale, reviewer notes, unresolved alternatives.
-- **Stopping conditions:** artificial mappings, ambiguous mappings without review path, missing target observations, or required semantic redefinition.
+- **Inputs:** Structology Candidate Model concepts, Domain Profile context, Domain Observations, and relevant Deviation Records if mapping departs from prior lifecycle rules.
+- **Outputs:** Mapping Records, including forced-fit indicators when observed.
+- **Transition rule:** proceed only when each material mapping targets one or more admissible Domain Observations and records preserved meaning, changed meaning, uncertainty, alternatives, rationale, and any forced-fit indicators.
+- **Required evidence:** source concept reference, target Domain Observations, Domain Profile context when used, mapping rationale, reviewer notes, unresolved alternatives, and recorded forced-fit indicators.
+- **Forced-fit handling:** artificial mapping, required semantic redefinition, collapsed distinction, or missing native counterpart must be recorded as forced-fit indicators and carried forward to Forced-Fit Assessment.
+
+  ```text
+  Artificial mapping
+  Required semantic redefinition
+  Collapsed distinction
+  Missing native counterpart
+          ↓
+  Record forced-fit indicator
+          ↓
+  Proceed to Forced-Fit Assessment
+  ```
+- **Stopping conditions:** mapping cannot be documented, mapping cannot be reviewed, missing target Domain Observations, or required provenance is absent.
 
 ### 16.6 Transfer Assessment
 
-- **Inputs:** Mapping Records and Domain Observations.
+- **Inputs:** Mapping Records, Domain Observations, and relevant Deviation Records.
 - **Outputs:** Transfer Assessment, Forced-Fit Assessment, Partial-Fit Assessment when applicable, and Failure Records when needed.
 - **Transition rule:** proceed only when preservation and forced-fit criteria are applied to the mapping set.
 - **Required evidence:** assessment rationale for object meaning, transformation meaning, lifecycle, provenance, verification semantics, artificial reinterpretation, partial fit, and forced fit.
@@ -332,7 +359,7 @@ Calibration Observation
 
 ### 16.7 Audit Conclusion
 
-- **Inputs:** completed assessments and Failure Records.
+- **Inputs:** completed assessments, Failure Records, and relevant Deviation Records.
 - **Outputs:** Audit Conclusion with one canonical transfer category or failure disposition.
 - **Transition rule:** apply decision rules and preserve limitations.
 - **Required evidence:** cited assessment records, decision-rule trace, uncertainty and limitation statement.
@@ -340,7 +367,7 @@ Calibration Observation
 
 ### 16.8 Calibration Observation
 
-- **Inputs:** audit execution artifacts, deviations, limitations, ambiguities, and reviewer notes.
+- **Inputs:** audit execution artifacts, Deviation Records, Failure Records, limitations, ambiguities, and reviewer notes.
 - **Outputs:** Calibration Observations.
 - **Transition rule:** record methodology improvement needs without modifying v0.1.
 - **Required evidence:** observed methodology issue, affected rule, execution context, proposed improvement direction, version boundary.
@@ -355,6 +382,7 @@ A compliant execution may produce the following object instances in the executio
 - Domain Profile;
 - Domain Observations;
 - Mapping Records;
+- Deviation Records when applicable;
 - Transfer Assessment;
 - Forced-Fit Assessment;
 - Partial-Fit Assessment when applicable;
@@ -378,7 +406,7 @@ Methodology Improvement Proposal
 Future Audit Version
 ```
 
-Calibration observations may identify unclear criteria, unusable lifecycle rules, missing evidence requirements, ambiguous decision precedence, repeated failure modes, or limitations discovered during execution.
+Calibration observations may identify unclear criteria, unusable lifecycle rules, missing evidence requirements, ambiguous decision precedence, repeated failure modes, deviation-handling issues, or limitations discovered during execution.
 
 Calibration does not modify v0.1. Accepted methodology improvements must create a future version and preserve the interpretation of executions bound to v0.1.
 
