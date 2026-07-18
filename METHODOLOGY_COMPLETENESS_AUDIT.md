@@ -1,5 +1,11 @@
 # Methodology Completeness Audit
 
+> [!IMPORTANT]
+> This is a historical audit of repository baseline `f1a3b3e`, performed on
+> 2026-07-17. Later methodology canon and named-instrument changes may resolve
+> findings recorded here. This document is preserved as audit evidence and is not
+> the current completeness determination.
+
 **Audit date:** 2026-07-17  
 **Baseline:** repository state at commit `f1a3b3e`  
 **Audit question:** Is the documented methodology sufficient for an independent
