@@ -2,13 +2,13 @@
 
 **Canonical status:** Minimum Methodology-Engineering Contract v0.1  
 **Scope:** reusable methodology and instrument contracts for research  
-**Boundary:** definition only; no methodology execution and no domain-specific audit instrument
+**Boundary:** definition only; no methodology execution; generic contract does not itself define domain-specific methodology semantics
 
 ## 1. Purpose
 
 This canon defines the minimum methodology-engineering contract required to create reusable research methodologies and scientific instruments. It does not define a specific research methodology, execute research, or evaluate scientific correctness.
 
-The contract stops at **Minimum Methodology-Engineering Contract v0.1**. A future issue may define a Cross-Domain Structology Transfer Audit Instrument, but that instrument is not defined here.
+The contract stops at **Minimum Methodology-Engineering Contract v0.1**. The generic contract does not itself define domain-specific methodology semantics. Named methodologies may specialize this contract in separate canonical artifacts, such as the [Cross-Domain Structology Transfer Audit v0.1](CROSS_DOMAIN_STRUCTOLOGY_TRANSFER_AUDIT_V0_1.md), without superseding this generic contract when the contract itself is unchanged.
 
 ## 2. Relationship to Structology
 
@@ -397,19 +397,19 @@ Calibration produces a new methodology version when it changes the contract. Cal
 
 ## 10. Known Limitations
 
-- This canon defines a generic methodology-engineering contract and required binding models, not a domain-specific audit instrument or empirical study.
-- It does not define the Cross-Domain Structology Transfer Audit.
+- This canon defines a generic methodology-engineering contract and required binding models, not domain-specific methodology semantics or an empirical study.
+- Named methodologies may specialize this contract in separate canonical artifacts; the Cross-Domain Structology Transfer Audit v0.1 is defined separately in [Cross-Domain Structology Transfer Audit v0.1](CROSS_DOMAIN_STRUCTOLOGY_TRANSFER_AUDIT_V0_1.md).
 - It does not execute any methodology or instrument.
 - It does not define domain-specific research protocols, schemas, validators, runtime behavior, compilers, or evidence models for specific studies.
 - It does not claim methodological correctness.
 - It relies on Structology Candidate Model v0.1 as an external conceptual reference and does not restate that model.
-- It leaves future issues to define concrete methodology definitions, concrete instrument definitions, and conformance artifacts.
+- It leaves future issues to define additional concrete methodology definitions, concrete instrument definitions, and conformance artifacts.
 
 ## 11. Explicit Non-Goals
 
 This repository change does not:
 
-- define the Cross-Domain Structology Audit;
+- execute the Cross-Domain Structology Transfer Audit;
 - execute any methodology;
 - define domain-specific research protocols;
 - define evidence models for specific studies;
