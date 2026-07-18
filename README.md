@@ -1,6 +1,6 @@
 # Research Methodology
 
-> **Status:** Foundational placeholder
+> **Status:** Minimum Methodology-Engineering Contract v0.1
 
 ## Purpose
 
@@ -17,6 +17,15 @@ It does not conduct research itself.
 ## Governing Question
 
 > **How should research objects be transformed into progressively stronger, reviewable, and reproducible research artifacts?**
+
+
+## Canonical Methodology-Engineering Contract
+
+This repository now defines the **Minimum Methodology-Engineering Contract v0.1** as its first canonical documentation for methodology engineering. The canonical contract is maintained in [Methodology Engineering Canon](METHODOLOGY_ENGINEERING_CANON.md).
+
+The contract explains how reusable research methodologies and scientific instruments are defined, versioned, reviewed, executed, calibrated, improved, and superseded without executing any particular study. It also establishes the required distinction ledger, minimum methodology object, methodology lifecycle, instrument lifecycle, repository boundary, known limitations, and explicit non-goals.
+
+This repository stops at the methodology-engineering contract. It does not define or execute the Cross-Domain Structology Transfer Audit Instrument.
 
 ## Core Model
 
@@ -168,12 +177,17 @@ This repository does not contain:
 
 - empirical study executions;
 - investigation-specific evidence;
+- the Cross-Domain Structology Audit or any other domain-specific instrument execution;
+- domain-specific research protocols;
+- evidence models for specific studies;
+- schemas, validators, runtime behavior, or methodology compilers;
 - formal domain theory;
 - deterministic analysis engines;
 - operational execution systems;
 - domain-specific research conclusions;
 - authority to accept scientific claims;
-- runtime object mutation.
+- runtime object mutation;
+- modifications to Structology.
 
 Those artifacts remain in their respective repositories and executions.
 
