@@ -25,7 +25,7 @@ This repository now defines the **Minimum Methodology-Engineering Contract v0.1*
 
 The contract explains how reusable research methodologies and scientific instruments are defined, versioned, reviewed, executed, calibrated, improved, and superseded without executing any particular study. It also establishes the required distinction ledger, minimum methodology object, methodology lifecycle, instrument lifecycle, repository boundary, known limitations, and explicit non-goals.
 
-This repository stops at the methodology-engineering contract. It does not define or execute the Cross-Domain Structology Transfer Audit Instrument.
+This repository also defines the **Cross-Domain Structology Transfer Audit v0.1** as a named methodology definition maintained in [Cross-Domain Structology Transfer Audit v0.1](CROSS_DOMAIN_STRUCTOLOGY_TRANSFER_AUDIT_V0_1.md). The audit definition specializes the generic contract for transfer assessment methodology only; it does not execute the audit or produce empirical findings.
 
 ## Core Model
 
@@ -177,7 +177,7 @@ This repository does not contain:
 
 - empirical study executions;
 - investigation-specific evidence;
-- the Cross-Domain Structology Audit or any other domain-specific instrument execution;
+- Cross-Domain Structology Transfer Audit executions or any other domain-specific instrument execution;
 - domain-specific research protocols;
 - evidence models for specific studies;
 - schemas, validators, runtime behavior, or methodology compilers;
@@ -203,7 +203,7 @@ Objects, stages, relations, transformations,
 verification, provenance, and failure
         ↓
 Research Methodology
-Research-specific methodology and instrument contracts
+Research-specific methodology and instrument contracts, including the Cross-Domain Structology Transfer Audit v0.1
         ↓
 Architectural Boundary Research
 Investigation-specific executions, evidence, assessments, and findings
