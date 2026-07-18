@@ -29,6 +29,8 @@ This repository also defines the **Cross-Domain Structology Transfer Audit v0.1*
 
 Residual methodology-conformance outcomes, negative-capability and interaction boundaries, and non-mutating cross-registry reconciliation are defined in the [Residual Conformance, Negative Capability, and Reconciliation Contract v1.0](RESIDUAL_CONFORMANCE_NEGATIVE_CAPABILITY_AND_RECONCILIATION_CONTRACT_V1_0.md). That contract does not authorize execution, repair, synchronization, or scientific claims.
 
+Residual generic evidence objects, lifecycle transitions, admissibility and sufficiency, projections, validated emission, and evidence-specific cross-repository conformance are defined in the [Residual Generic Evidence Lifecycle and Conformance Contract v1.0](RESIDUAL_GENERIC_EVIDENCE_LIFECYCLE_AND_CONFORMANCE_CONTRACT_V1_0.md). This repository owns only that reusable definition; concrete evidence and executions remain in their investigation or evidence repositories.
+
 ## Core Model
 
 ```text
