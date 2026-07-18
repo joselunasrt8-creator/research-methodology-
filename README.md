@@ -203,10 +203,10 @@ Objects, stages, relations, transformations,
 verification, provenance, and failure
         ↓
 Research Methodology
-Research-specific object and transformation contracts
+Research-specific methodology and instrument contracts
         ↓
-Research Execution
-Investigation-specific instances and events
+Architectural Boundary Research
+Investigation-specific executions, evidence, assessments, and findings
 ```
 
 Research Methodology must not redefine domain-neutral structure as though it were unique to research.

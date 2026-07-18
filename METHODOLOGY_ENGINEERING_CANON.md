@@ -19,10 +19,10 @@ Structology
 Candidate structural concepts
         ↓
 Research Methodology
-Defines research methodology contracts
+Reusable research methodology and instrument contracts
         ↓
-Research Execution
-Executes one methodology
+Architectural Boundary Research
+Concrete methodology executions, evidence, assessments, and findings
 ```
 
 Research Methodology references Structology. It does not redefine Structology, modify Structology, or claim ownership over domain-neutral structural concepts.
@@ -30,14 +30,11 @@ Research Methodology references Structology. It does not redefine Structology, m
 ## 3. Repository Boundary
 
 ```text
+Structology
+        ↓
 Research Methodology
-Defines methodologies
         ↓
 Architectural Boundary Research
-Executes methodologies
-        ↓
-Structology
-Defines candidate structural concepts
 ```
 
 Research Methodology owns methodology definitions, instrument definitions, lifecycle contracts, review expectations, versioning semantics, calibration semantics, and supersession semantics. It does not own investigations, study evidence, empirical conclusions, or execution systems.
@@ -167,6 +164,127 @@ A methodology definition must expose the following minimum object. Each field is
 
 No field in the minimum contract is currently classified as unresolved. Additional methodology-specific fields may be optional or investigation supplied, but they must not weaken the foundational fields.
 
+
+## 6A. Complete Methodology Object
+
+A complete methodology object must be sufficient for an execution repository to identify the governing contract, bind inputs, perform bounded transformations, record provenance, and determine whether execution may continue. The minimum object is:
+
+```text
+Methodology Object {
+  identity
+  version
+  governing question
+  admissible inputs
+  procedure
+  decision rules
+  provenance requirements
+  deviation semantics
+  failure and stopping rules
+  outputs
+  limitations
+  supersession lineage
+}
+```
+
+| Field | Required meaning |
+| --- | --- |
+| Identity | Stable methodology name or identifier. |
+| Version | Immutable version of the methodology contract. |
+| Governing question | The reusable question form the methodology is designed to answer or structure. |
+| Admissible inputs | Input classes, required attributes, exclusion criteria, admissibility thresholds, and minimum completeness conditions. |
+| Procedure | Ordered transformation steps, stage gates, required records, and completion criteria. |
+| Decision rules | Deterministic rules, precedence rules, or required adjudication records for material choices. |
+| Provenance requirements | Minimum source, custody, actor, timestamp, version, configuration, and derivation records required for replay and review. |
+| Deviation semantics | Required classification, authorization, impact assessment, and disposition for departures from the contract. |
+| Failure and stopping rules | Conditions that require rejection, suspension, amendment, continuation with limitation, or termination. |
+| Outputs | Required artifacts, completion criteria, verification requirements, and publication or handoff boundaries. |
+| Limitations | Applicability, inference, measurement, operational, evidentiary, and interpretation boundaries. |
+| Supersession lineage | Prior version, successor version, reason for replacement, effective boundary, and preservation rule for earlier executions. |
+
+A methodology definition is incomplete if any field is absent, if execution cannot identify the exact version in force, or if stopping and failure conditions are left to unrecorded judgment.
+
+## 6B. Execution Binding Contract
+
+Execution is not part of the methodology definition, but a compliant execution must bind itself to the exact methodology contract it applies:
+
+```text
+Execution
+        ↓
+Exact methodology identity
+Exact version
+Declared inputs
+Declared scope
+Provenance
+Deviations
+Artifacts
+Verification result
+Stopping determination
+```
+
+| Binding element | Required meaning |
+| --- | --- |
+| Exact methodology identity | The stable methodology identifier used by the execution. |
+| Exact version | The immutable methodology version in force for the execution. |
+| Declared inputs | Concrete inputs accepted for the execution, including admissibility determinations and exclusions. |
+| Declared scope | The execution boundary, exclusions, assumptions, and interpretation limits. |
+| Provenance | Source, custody, actor, timestamp, version, configuration, and derivation records sufficient for review. |
+| Deviations | Recorded departures from the methodology or instrument contract, including authorization and impact. |
+| Artifacts | Durable records produced or consumed by the execution. |
+| Verification result | The conformance determination against the bound methodology version. |
+| Stopping determination | The recorded decision to continue, stop, suspend, fail, or complete under the declared stopping rules. |
+
+The validated object must be the executed object: an execution may not claim conformance to a methodology version unless its bound inputs, artifacts, deviations, verification result, and stopping determination are the objects reviewed.
+
+## 6C. Reusable Transformation Classes
+
+Methodology engineering in this repository uses these reusable transformation classes:
+
+```text
+Research Need → Research Request
+Research Request → Methodology Definition
+Methodology + Inputs → Execution
+Observations → Evidence Records
+Evidence Records → Assessment
+Instrument Observations → Calibration Proposal
+Calibration Decision → New Version
+```
+
+| Transformation class | Source object | Target object | Minimum rule |
+| --- | --- | --- | --- |
+| Research Need → Research Request | Stated methodological gap or investigation need | Bounded research request | Convert an unbounded need into a reviewable request with question form, scope, constraints, and acceptance disposition. |
+| Research Request → Methodology Definition | Accepted request | Versioned methodology definition | Define the contract that can answer the request class without embedding a particular execution. |
+| Methodology + Inputs → Execution | Methodology version and declared inputs | Bound execution record | Bind exact identity, version, scope, inputs, provenance obligations, artifacts, verification, deviations, and stopping determination. |
+| Observations → Evidence Records | Raw or derived observations | Evidence records | Admit observations only when provenance, source, admissibility, uncertainty, and derivation requirements are satisfied. |
+| Evidence Records → Assessment | Evidence records | Assessment or decision outcome | Apply declared decision rules and record strength, uncertainty, alternatives, limitations, and disposition. |
+| Instrument Observations → Calibration Proposal | Instrument execution observations and deviations | Calibration proposal | Identify whether instrument behavior supports continuation, limitation, repair, or a new version. |
+| Calibration Decision → New Version | Accepted calibration decision | New methodology or instrument version | Create a new immutable version when the contract changes; preserve earlier versions and executions. |
+
+## 6D. Required Supporting Models
+
+### Evidence and Decision Outcomes
+
+Evidence records must identify source, observation or derivation method, admissibility status, provenance, uncertainty, limitations, relationship to the claim or question, and retention location. Decision outcomes must identify the decision rule applied, evidence considered, evidence excluded, confidence or strength statement, unresolved uncertainty, dissent or adjudication record when applicable, and disposition.
+
+### Deviations
+
+A deviation record must identify expected rule, actual event, object affected, time detected, cause, authorization status, corrective action, impact on evidence or output, reviewer, and disposition. Permitted dispositions are: accepted with limitation, corrected, rejected, escalated, execution suspended, or execution failed.
+
+### Failure and Stopping Rules
+
+Failure and stopping rules must distinguish invalid input, missing provenance, unmet evidence requirement, failed verification, unauthorized deviation, instrument failure, irrecoverable ambiguity, and scope breach. Each rule must specify the required response: reject input, pause for amendment, continue with limitation, rerun, supersede, terminate, or mark output unusable.
+
+### Calibration Proposals
+
+A calibration proposal must identify the methodology or instrument version evaluated, reference or pilot execution basis, observed limitation or failure, affected rule, proposed change, expected effect, backward-compatibility assessment, historical-preservation impact, reviewer decision, and whether a new version is required.
+
+### Historical Preservation
+
+Historical preservation requires immutable version identity, immutable execution binding, preserved evidence records, explicit supersession links, and no retroactive rewrite of earlier methodology versions, instrument versions, executions, evidence, assessments, or findings. Later versions may reinterpret future use; they may not silently relabel past objects.
+
+### Named-Instrument Extension
+
+A methodology may define a named instrument as an extension object when a reusable procedure, tool, rubric, questionnaire, model, device, or protocol needs independent identity. The named-instrument extension must include instrument identity, version, applicable methodology context, inputs, outputs, operating rules, calibration requirements, limitations, deviation rules, provenance requirements, execution binding requirements, improvement path, and supersession lineage.
+
 ## 7. Minimum Methodology Lifecycle
 
 ```text
@@ -279,7 +397,7 @@ Calibration produces a new methodology version when it changes the contract. Cal
 
 ## 10. Known Limitations
 
-- This canon defines a minimum methodology-engineering contract, not a complete research methodology.
+- This canon defines a generic methodology-engineering contract and required binding models, not a domain-specific audit instrument or empirical study.
 - It does not define the Cross-Domain Structology Transfer Audit.
 - It does not execute any methodology or instrument.
 - It does not define domain-specific research protocols, schemas, validators, runtime behavior, compilers, or evidence models for specific studies.
