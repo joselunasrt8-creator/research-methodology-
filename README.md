@@ -315,16 +315,14 @@ This repository reserves the architectural boundary for a general research metho
 
 Content should be promoted here only when it is reusable across multiple research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
 
-## Completeness Audit
+## Historical Methodology Completeness Audit
 
-The current methodology boundary has been assessed from research request through publication. The audit records the information, rules, transformations, and artifacts an independent researcher would need without evaluating a research claim or proposing an implementation.
-
-See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
-## Historical methodology completeness audit
-
-`METHODOLOGY_COMPLETENESS_AUDIT.md` records a completeness audit performed on
+`METHODOLOGY_COMPLETENESS_AUDIT.md` records an assessment performed on
 2026-07-17 against repository baseline `f1a3b3e`.
 
-Its findings describe that historical baseline and must not be interpreted as the
-current repository determination without reconciliation against later methodology
-canon and instrument changes.
+The audit identifies the information, rules, transformations, and artifacts that
+were missing or underspecified at that historical baseline. Its findings are
+preserved as audit evidence and are not the current repository completeness
+determination.
+
+See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
