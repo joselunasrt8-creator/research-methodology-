@@ -2,6 +2,30 @@
 
 > **Status:** Minimum Methodology-Engineering Contract v0.1
 
+## Research Methodology Overview
+
+This visual overview introduces the purpose, lifecycle, engineering principles, ecosystem position, and long-term vision of the Research Methodology repository.
+
+### Research Methodology
+
+![Research Methodology](assets/slides/slide-01-research-methodology.png?raw=1)
+
+### Methodology Lifecycle
+
+![Methodology Lifecycle](assets/slides/slide-02-methodology-lifecycle.png?raw=1)
+
+### Why Methodology Engineering Matters
+
+![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png?raw=1)
+
+### Where Research Methodology Fits
+
+![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png?raw=1)
+
+### Long-Term Vision
+
+![Long-Term Vision](assets/slides/slide-05-long-term-vision.png?raw=1)
+
 ## Purpose
 
 This repository develops a general methodology for conducting reproducible research.
@@ -17,67 +41,6 @@ It does not conduct research itself.
 ## Governing Question
 
 > **How should research objects be transformed into progressively stronger, reviewable, and reproducible research artifacts?**
-
-
-## The Continuous Research System
-
-
-Research Methodology defines reusable contracts and research instruments that transform methodological principles into repeatable execution, comparable evidence, and cumulative knowledge.
-
-### 1. The Problem
-
-
-Methodology may define principles without fully specifying execution. When execution varies, evidence and conclusions become difficult to compare.
-
-### 2. The Shift
-
-
-A research instrument is the missing abstraction between methodology and execution. It preserves the methodology while defining a shared execution specification.
-
-### 3. The Research Instrument Object Model
-
-
-A research instrument is a governed, versioned, first-class methodology object with explicit identity, purpose, inputs, stages, outputs, validation, amendment, supersession, and stopping rules.
-
-### 4. The Research Instrument Lifecycle
-
-
-Instrument versions move through design, validation, freeze, execution, observation, calibration, improvement, and release. Methodological principles remain stable while instruments evolve through evidence-driven refinement.
-
-### 5. Research Instrument Execution
-
-
-Execution applies a frozen instrument specification to declared inputs, producing observations that may later become evidence. Execution does not establish scientific truth, authority, or execution permission.
-
-### 6. The Research Evidence Object Model
-
-
-Evidence is a durable, structured artifact with explicit content, metadata, provenance, integrity, relationships, uncertainty, and limitations.
-
-### 7. From Evidence to Knowledge
-
-
-Knowledge emerges through comparison, synthesis, and bounded generalization across multiple evidence artifacts. Evidence does not automatically become knowledge or authorize conclusions.
-
-### 8. The Research Methodology Architecture
-
-
-Research Methodology defines reusable methodology and instrument contracts. It does not execute investigations, formalize theory, produce deterministic structural evidence, or determine execution legitimacy.
-
-### 9. The Research Methodology Principles
-
-
-The architecture depends on clear ownership, repeatability, evidence-first reasoning, explicit boundaries, continuous calibration, and cumulative learning.
-
-### 10. The Continuous Research System
-
-
-Research instruments connect principles, execution, evidence, knowledge, and improvement without collapsing their distinct meanings or authority boundaries.
-
-### 11. The Research Shift
-
-
-The long-term shift is from isolated studies with variable execution toward governed research systems that produce comparable evidence and support cumulative knowledge.
 
 ## Canonical Methodology-Engineering Contract
 
@@ -390,27 +353,3 @@ preserved as audit evidence and are not the current repository completeness
 determination.
 
 See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
-
-## Research Methodology Overview
-
-This visual overview introduces the purpose, lifecycle, engineering principles, ecosystem position, and long-term vision of the Research Methodology repository.
-
-### Research Methodology
-
-![Research Methodology](assets/slides/slide-01-research-methodology.png?raw=1)
-
-### Methodology Lifecycle
-
-![Methodology Lifecycle](assets/slides/slide-02-methodology-lifecycle.png?raw=1)
-
-### Why Methodology Engineering Matters
-
-![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png?raw=1)
-
-### Where Research Methodology Fits
-
-![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png?raw=1)
-
-### Long-Term Vision
-
-![Long-Term Vision](assets/slides/slide-05-long-term-vision.png?raw=1)
