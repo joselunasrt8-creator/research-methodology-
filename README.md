@@ -397,20 +397,20 @@ This visual overview introduces the purpose, lifecycle, engineering principles, 
 
 ### Research Methodology
 
-![Research Methodology](assets/slides/slide-01-research-methodology.png)
+![Research Methodology](assets/slides/slide-01-research-methodology.png?raw=1)
 
 ### Methodology Lifecycle
 
-![Methodology Lifecycle](assets/slides/slide-02-methodology-lifecycle.png)
+![Methodology Lifecycle](assets/slides/slide-02-methodology-lifecycle.png?raw=1)
 
 ### Why Methodology Engineering Matters
 
-![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png)
+![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png?raw=1)
 
 ### Where Research Methodology Fits
 
-![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png)
+![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png?raw=1)
 
 ### Long-Term Vision
 
-![Long-Term Vision](assets/slides/slide-05-long-term-vision.png)
+![Long-Term Vision](assets/slides/slide-05-long-term-vision.png?raw=1)
