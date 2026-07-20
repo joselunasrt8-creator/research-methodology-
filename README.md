@@ -402,3 +402,27 @@ preserved as audit evidence and are not the current repository completeness
 determination.
 
 See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
+
+## Research Methodology Overview
+
+This visual overview introduces the purpose, lifecycle, engineering principles, ecosystem position, and long-term vision of the Research Methodology repository.
+
+### Research Methodology
+
+![Research Methodology](assets/slides/slide-01-research-methodology.png)
+
+### Methodology Lifecycle
+
+![Methodology Lifecycle](assets/slides/slide-02-methodology-lifecycle.png)
+
+### Why Methodology Engineering Matters
+
+![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png)
+
+### Where Research Methodology Fits
+
+![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png)
+
+### Long-Term Vision
+
+![Long-Term Vision](assets/slides/slide-05-long-term-vision.png)
