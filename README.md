@@ -21,73 +21,61 @@ It does not conduct research itself.
 
 ## The Continuous Research System
 
-![The Continuous Research System](assets/slides/continuous-research-system-banner.png)
 
 Research Methodology defines reusable contracts and research instruments that transform methodological principles into repeatable execution, comparable evidence, and cumulative knowledge.
 
 ### 1. The Problem
 
-![Methodologies Alone Are Not Enough](assets/slides/the-problem.png)
 
 Methodology may define principles without fully specifying execution. When execution varies, evidence and conclusions become difficult to compare.
 
 ### 2. The Shift
 
-![Methodologies Need Research Instruments](assets/slides/the-shift.png)
 
 A research instrument is the missing abstraction between methodology and execution. It preserves the methodology while defining a shared execution specification.
 
 ### 3. The Research Instrument Object Model
 
-![The Research Instrument Object Model](assets/slides/research-instrument-object-model.png)
 
 A research instrument is a governed, versioned, first-class methodology object with explicit identity, purpose, inputs, stages, outputs, validation, amendment, supersession, and stopping rules.
 
 ### 4. The Research Instrument Lifecycle
 
-![The Research Instrument Lifecycle](assets/slides/research-instrument-lifecycle.png)
 
 Instrument versions move through design, validation, freeze, execution, observation, calibration, improvement, and release. Methodological principles remain stable while instruments evolve through evidence-driven refinement.
 
 ### 5. Research Instrument Execution
 
-![Research Instrument Execution](assets/slides/research-instrument-execution.png)
 
 Execution applies a frozen instrument specification to declared inputs, producing observations that may later become evidence. Execution does not establish scientific truth, authority, or execution permission.
 
 ### 6. The Research Evidence Object Model
 
-![The Research Evidence Object Model](assets/slides/research-evidence-object-model.png)
 
 Evidence is a durable, structured artifact with explicit content, metadata, provenance, integrity, relationships, uncertainty, and limitations.
 
 ### 7. From Evidence to Knowledge
 
-![From Evidence to Knowledge](assets/slides/from-evidence-to-knowledge.png)
 
 Knowledge emerges through comparison, synthesis, and bounded generalization across multiple evidence artifacts. Evidence does not automatically become knowledge or authorize conclusions.
 
 ### 8. The Research Methodology Architecture
 
-![The Research Methodology Architecture](assets/slides/research-methodology-architecture.png)
 
 Research Methodology defines reusable methodology and instrument contracts. It does not execute investigations, formalize theory, produce deterministic structural evidence, or determine execution legitimacy.
 
 ### 9. The Research Methodology Principles
 
-![The Research Methodology Principles](assets/slides/research-methodology-principles.png)
 
 The architecture depends on clear ownership, repeatability, evidence-first reasoning, explicit boundaries, continuous calibration, and cumulative learning.
 
 ### 10. The Continuous Research System
 
-![The Continuous Research System](assets/slides/continuous-research-system.png)
 
 Research instruments connect principles, execution, evidence, knowledge, and improvement without collapsing their distinct meanings or authority boundaries.
 
 ### 11. The Research Shift
 
-![The Research Shift](assets/slides/the-research-shift.png)
 
 The long-term shift is from isolated studies with variable execution toward governed research systems that produce comparable evidence and support cumulative knowledge.
 
