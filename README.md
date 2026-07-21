@@ -1,12 +1,12 @@
-# Research Methodology
+# Methodology Engineering
 
 > **Status:** Minimum Methodology-Engineering Contract v0.1
 
-## Research Methodology Overview
+## Methodology Engineering Overview
 
-This visual overview introduces the purpose, lifecycle, engineering principles, ecosystem position, and long-term vision of the Research Methodology repository.
+This visual overview introduces the purpose, lifecycle, engineering principles, ecosystem position, and long-term vision of the Methodology Engineering repository.
 
-### Research Methodology
+### Methodology Engineering
 
 ![Research Methodology](assets/slides/slide-01-research-methodology.png?raw=1)
 
@@ -18,7 +18,7 @@ This visual overview introduces the purpose, lifecycle, engineering principles, 
 
 ![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png?raw=1)
 
-### Where Research Methodology Fits
+### Where Methodology Engineering Fits
 
 ![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png?raw=1)
 
@@ -28,19 +28,27 @@ This visual overview introduces the purpose, lifecycle, engineering principles, 
 
 ## Purpose
 
-This repository develops a general methodology for conducting reproducible research.
+This repository develops the principles, object models, transformation contracts, and scientific instruments for engineering reproducible methodologies.
 
 Its central determination is:
 
 > **A methodology is a normative object transformation system.**
 
-It defines which research objects exist, how they may be transformed, what evidence and rules each transformation requires, how outputs are verified, and how provenance, uncertainty, and failure are preserved.
+A methodology defines which objects exist, how they may be transformed, what evidence and rules each transformation requires, how outputs are verified, and how provenance, uncertainty, and failure are preserved.
 
-It does not conduct research itself.
+Research methodology is the first reference specialization developed within this repository.
+
+This repository does not conduct research or execute methodologies itself.
+
+## What is Methodology Engineering?
+
+Methodology Engineering is the discipline of designing, validating, and evolving methodologies that systematically transform complex reality into reproducible evidence, validated understanding, and better decisions.
+
+It provides the object models, transformation contracts, scientific instruments, lifecycle rules, and verification principles required to build reusable methodologies without collapsing methodology definition into methodology execution.
 
 ## Governing Question
 
-> **How should research objects be transformed into progressively stronger, reviewable, and reproducible research artifacts?**
+> **How should methodologies be engineered to systematically transform complex reality into reproducible evidence, validated understanding, and better decisions?**
 
 ## Canonical Methodology-Engineering Contract
 
@@ -54,7 +62,29 @@ Residual methodology-conformance outcomes, negative-capability and interaction b
 
 Residual generic evidence objects, lifecycle transitions, admissibility and sufficiency, projections, validated emission, and evidence-specific cross-repository conformance are defined in the [Residual Generic Evidence Lifecycle and Conformance Contract v1.0](RESIDUAL_GENERIC_EVIDENCE_LIFECYCLE_AND_CONFORMANCE_CONTRACT_V1_0.md). This repository owns only that reusable definition; concrete evidence and executions remain in their investigation or evidence repositories.
 
-## Core Model
+## General Model
+
+```text
+Complex Reality
+        ↓
+Objects
+        ↓
+Methodology
+Defines valid transformations
+        ↓
+Execution
+Applies transformations
+        ↓
+Evidence
+        ↓
+Understanding
+        ↓
+Decision
+```
+
+Research methodology is the first specialization of this general methodology-engineering model.
+
+## Research Methodology Specialization
 
 ```text
 Research Need
@@ -86,19 +116,19 @@ Object
 Execution
 ```
 
-An object represents a bounded research state or artifact.
+An object represents a bounded state or artifact.
 
 Execution is an activity or event that creates, consumes, or transforms concrete object instances.
 
-Research Methodology defines the transformation contract:
+Methodology Engineering defines the transformation contract:
 
 ```text
 Object
         ↓
-Research Methodology
+Methodology
 Defines valid transformations
         ↓
-Research Execution
+Execution
 Applies a transformation
         ↓
 New Object
@@ -109,7 +139,7 @@ Therefore:
 ```text
 Methodology
 ≠
-Research Execution
+Execution
 ```
 
 ```text
@@ -184,6 +214,11 @@ These are type definitions. A specific investigation produces concrete instances
 
 ## Current Scope
 
+- Methodology object systems
+- Methodology lifecycle engineering
+- Transformation contracts
+- Methodology specialization
+- Scientific instrument design
 - Research-object definitions
 - Investigation lifecycle and stage gates
 - Evidence planning and admissibility
@@ -203,8 +238,10 @@ These are type definitions. A specific investigation produces concrete instances
 This repository does not contain:
 
 - empirical study executions;
+- methodology executions;
 - investigation-specific evidence;
 - Cross-Domain Structology Transfer Audit executions or any other domain-specific instrument execution;
+- domain-specific methodologies except as bounded reference specializations;
 - domain-specific research protocols;
 - evidence models for specific studies;
 - schemas, validators, runtime behavior, or methodology compilers;
@@ -218,31 +255,34 @@ This repository does not contain:
 
 Those artifacts remain in their respective repositories and executions.
 
-## Relationship to Structology
+## Methodology Engineering and Structology
 
 Structology defines domain-neutral structural primitives.
 
-Research Methodology specializes those primitives for research.
+Methodology Engineering specializes those primitives into methodology and instrument contracts. Research methodology is the first reference specialization.
 
 ```text
 Structology
 Objects, stages, relations, transformations,
 verification, provenance, and failure
         ↓
+Methodology Engineering
+Methodology and instrument contracts
+        ↓
 Research Methodology
-Research-specific methodology and instrument contracts, including the Cross-Domain Structology Transfer Audit v0.1
+Research-specific transformation contracts
         ↓
 Architectural Boundary Research
 Investigation-specific executions, evidence, assessments, and findings
 ```
 
-Research Methodology must not redefine domain-neutral structure as though it were unique to research.
+Methodology Engineering must not redefine domain-neutral structure as though it were unique to methodology or research.
 
 ## Relationship to Research Execution
 
-Research Methodology defines types and valid transformations.
+Methodology Engineering defines types and valid transformations.
 
-Research execution creates instances and performs transformations.
+Research execution creates instances and performs transformations under the research methodology specialization.
 
 For example:
 
@@ -264,14 +304,14 @@ Executes one analysis over frozen evidence
 
 A completed object or transformation instance is evidence of execution. A methodology definition alone is not.
 
-## Relationship to the Research Stack
+## Relationship to the Continufy Ecosystem
 
 ```text
 Structology
 Defines domain-neutral structure
         ↓
-Research Methodology
-Defines research transformation contracts
+Methodology Engineering
+Defines methodology transformation contracts
         ↓
 MindShift
 Produces candidate abstractions and research requests
@@ -295,7 +335,7 @@ Each repository owns a distinct transformation and produces a distinct class of 
 ```text
 Methodology
 ≠
-Research Execution
+Execution
 ```
 
 ```text
@@ -334,13 +374,15 @@ Publication
 Canonical Evidence
 ```
 
-This repository defines how reproducible research may be structured. It does not conduct, formalize, implement, operationalize, or authorize the research itself.
+This repository defines how reproducible methodologies may be structured. It does not conduct, formalize, implement, operationalize, or authorize domain executions itself.
 
 ## Current Status
 
-This repository reserves the architectural boundary for a general research methodology while that methodology continues to emerge through active investigations.
+This repository defines the architectural boundary for Methodology Engineering while the discipline continues to emerge through reference specializations and active investigations.
 
-Content should be promoted here only when it is reusable across multiple research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
+Research methodology is the first reference specialization. Additional methodology domains should be introduced only when reusable methodology-engineering patterns are supported by repeated execution evidence.
+
+Content should be promoted here only when it is reusable across multiple methodology or research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
 
 ## Historical Methodology Completeness Audit
 
